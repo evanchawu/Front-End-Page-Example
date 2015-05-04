@@ -1,0 +1,10 @@
+/* Layout */
+
+#header, #footer, #content {
+	width: 100%;
+}
+
+#header > .wrapper, #footer > .wrapper, main > .wrapper {
+	width: 1200px;
+	margin: 0 auto;
+}

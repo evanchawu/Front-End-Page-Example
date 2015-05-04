@@ -1,0 +1,93 @@
+/* Preset */
+
+img {
+	display: block;
+}
+
+
+
+
+
+/* Layout */
+
+body {
+    background: #1b2544;
+}
+
+#header, footer, main {
+	width: 100%;
+}
+
+.wrapper {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.loading-bar {
+	height: 6px;
+	background-color: #159588;
+}
+
+
+
+
+
+
+/* header */
+
+#header {
+    padding: 30px 0;
+    color: white;
+    margin-bottom: 180px;
+    cursor: pointer;
+}
+
+#header .logo {
+    float: left;
+}
+
+#header .subtitle {
+    float: right;
+}
+
+#main-nav {
+    padding: 30px 300px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    color: white;
+    overflow: auto;
+    text-align: center;
+    background: #1b2544;
+    
+    opacity: 0;
+}
+
+#main-nav .logo {
+    float: left;
+}
+
+#main-nav ul {
+    margin: 0;
+    float: left;
+}
+
+#main-nav li {
+    display: inline-block;
+    width: 80px;
+}
+
+#main-nav a {
+    color: white;
+}
+
+
+
+
+
+
+#main-photo img, #main img {
+    width: 100%;
+    height: auto;
+}

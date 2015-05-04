@@ -1,0 +1,206 @@
+/* Preset */
+
+img {
+	display: block;
+}
+
+
+
+
+
+/* Layout */
+
+#header, #footer, #content {
+	width: 100%;
+}
+
+#header > .wrapper, #footer > .wrapper, #content > .wrapper {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+
+
+
+
+/* Header */
+
+#header {
+	padding: 30px 0;
+}
+
+#header .branding {
+	display: inline-block;
+	overflow: auto;
+}
+
+#header .branding > div {
+	float: left;
+}
+
+#header .branding .tagline {
+	position: relative;
+	margin-left: 20px;
+	top: 1em;
+}
+
+.tagline .subtitle {
+	color: #777;
+}
+
+.logo img {
+	width: 66px;
+	height: auto;
+}
+
+
+
+#navigation {
+	display: inline-block;
+	float: right;
+}
+
+#navigation ul {
+	position: relative;
+	margin: 0;
+	padding-left: 0;
+	top: 2.1em;
+}
+
+#navigation li {
+	list-style-type: none;
+	display: inline-block;
+	text-transform: capitalize;
+	margin-left: 1.5em;
+}
+
+#navigation a {
+	color: black;
+	text-decoration: none;
+}
+
+
+
+
+/* Contents */
+
+#content {
+	overflow: auto;
+}
+
+.work {
+	position: relative;
+	display: block;
+	float: left;
+	margin-bottom: 10px;
+}
+
+.work img {
+	width: 100%;
+	height: auto;
+}
+
+.work a {
+	opacity: 0;
+	
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #159588;
+	
+	text-decoration: none;
+	color: white;
+}
+
+.work.half-width {
+	width: 49.5%;
+}
+
+.work.half-width.left {
+	margin-right: 1%;
+}
+
+.work .caption {
+	padding: 1.25em;
+}
+
+.caption .title {
+	margin-top: 0;
+	margin-bottom: .8em;
+}
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+#footer {
+	overflow: auto;
+	padding: 40px 0;
+}
+
+#footer a {
+	color: #159588;
+}
+
+#footer .wrapper {
+	overflow: auto;
+	border-top: 1px solid #ddd;
+	padding-top: 30px;
+}
+
+#footer .wrapper > div:not(.social-media) {
+	float: left;
+}
+
+#footer .social-media {
+	float: right;
+}
+
+#footer .contact-info {
+	width: 32%;
+}
+
+#footer .navigation {
+	width: 16%;
+}
+
+
+
+
+#footer ul {
+	margin: 0;
+	padding-left: 0;
+}
+
+#footer li {
+	list-style-type: none;
+}
+
+
+
+
+
+#footer .title {
+	margin-top: 0;
+	margin-bottom: .6em;
+	font-size: 1em;
+	text-transform: capitalize;
+}
+
+#footer .contact-info > div, #footer li {
+	line-height: 1.4em;
+	color: #888;
+	text-transform: capitalize;
+}
+
+
+

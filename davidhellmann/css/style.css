@@ -1,0 +1,109 @@
+/* Preset */
+
+img {
+	display: block;
+}
+
+
+
+
+
+/* Layout */
+
+#header, footer, main {
+	width: 100%;
+}
+
+.wrapper {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.loading-bar {
+	height: 6px;
+	background-color: #159588;
+}
+
+
+
+
+
+
+/* header */
+
+#header {
+    padding: 30px 0;
+    background-color: #384451;
+    color: white;
+    margin-bottom: 30px;
+}
+
+#header a {
+    color: white;
+}
+
+#header .wrapper > div {
+    float: left;
+}
+
+#logo {
+    margin-right: 30px;
+    font-weight: bold;
+}
+
+#main-nav ul {
+    margin: 0;
+}
+
+#main-nav li {
+    display: inline-block;
+    width: 80px;
+}
+
+
+
+
+
+#main-photo img, #main img {
+    width: 100%;
+    height: auto;
+}
+
+.tab.read {
+    padding: 30px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.portfolio ul {
+    padding-left: 0;
+    overflow: auto;
+}
+
+.portfolio li {
+    width: 23.5%;
+    list-style-type: none;
+    float: left;
+    margin-right: 2%;
+    position: relative;
+    cursor: pointer;
+    
+    overflow: hidden;
+}
+
+.portfolio li:last-child {
+    margin-right: 0;
+}
+
+.portfolio li img {
+    width: 100%;
+    position: relative;
+}
+
+.portfolio li .title {
+    position: absolute;
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    top: 100px;
+}

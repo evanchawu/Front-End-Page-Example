@@ -1,0 +1,351 @@
+#header {
+	padding: 30px 0;
+}
+
+#header, #footer, main {
+	width: 100%;
+}
+/*
+/*
+w1200 tab
+m0-a tab
+*/
+
+#header > .wrapper, #footer > .wrapper, main> .wrapper{
+	width: 1200px; 
+	margin: 0 auto;  
+}
+
+/*
+圖片130px  顯示小兩倍 這樣比較精緻
+height 自動就是依照寬，然後按照圖片大小比例。
+
+margin: 0 auto ;
+0是上下不跟其他元素留白 auto左右自動幫你算
+
+*/
+.logo img{
+	width: 66px;
+	height: auto;
+}
+
+#header	.branding > div {
+	float: left;
+}
+
+/*
+position: relative;  top: 1em;是一對的
+相對原本位置往下
+em就是現在字級大小。
+*/
+#header .branding .tagline {
+	position: relative;
+	margin-left: 20px;
+	top: 1em;
+}
+
+#header .branding {
+	display:inline-block;
+	width:300px ;
+	overflow: auto;
+}
+
+
+#navigation{
+	display: inline-block;  /*dilb  tab*/
+	float: right;
+}
+
+#navigation li {
+	list-style-type: none;
+	display: inline-block;
+	text-transform: capitalize;  
+	margin-left: 1.5em;
+}
+
+#navigation a {
+	color: black;
+	text-decoration: none;
+}
+
+/*
+清掉跟其他元素距離margin 跟padding-left   然後再條距離會比較好算
+順序沒有差，可以先寫top
+*/
+#navigation ul{
+	position: relative;
+	margin: 0;
+	padding-left: 0;
+	top:2.1em; 
+}
+
+.tagline .subtitle {
+	color: #777;  /*color pic*/
+}
+
+.work a{
+
+	/*要跟背景圖一樣位置*/
+	position: absolute; /*對其有設定過的祖先而言*/
+	top:0;
+	left: 0;
+
+	display: inline-block;/*本身是a是inline元素，沒有寬高 所以要先設成inline block 才能設寬高*/
+	width: 100%; /*多大就看爸爸多大 爸爸多大就看內容多大 就是一張圖*/
+	height: 100%;
+	background-color: #159588;
+
+	text-decoration: none;
+	color: white;
+
+}
+
+.work{ 
+	position: relative;
+	/*因為剛剛a取絕對位置，a往上找到有設定過位置的，會找到body
+    所以work要設定position，設relative但沒設寬高還在原地，
+    就是一個容器概念，這樣a就會找到他。
+	*/
+	display: block;
+	float: left;	
+	margin-bottom: 10px;
+}
+
+#content {
+	overflow: auto;
+}
+
+.work .caption {
+	padding: 1.25em;
+}
+
+.caption .title{
+	margin-top: 0;
+	margin-bottom: .8em;
+}
+
+.work a {
+	opacity: 0; /*透明度 1是不透明*/
+}
+
+/*以下兩個加起來100%*/
+.work.half-width {
+	width: 49.5%;
+}
+
+.work.half-width.left {
+	margin-right: 1%;
+}
+
+/*
+然後因為caption上面設定變一半了
+但img沒變所以以下要讓img設定也變一半
+img follow 爸爸work 
+*/
+/*目前圖會爆掉？ 做以下設定讓跟爸一樣大？
+因為work 裡面有 img 跟 caption，後面要把img蓋掉
+因為依照html出現順序，後來的就在上面，
+所以caption設為absolute時候就把img蓋掉。
+
+
+
+
+*/
+.work img{ 
+	width:100%;
+	height: auto;
+
+}
+
+/*因為footer下面要做float所以要先做overflow
+如果內容太多就會幫你多一個拉bar
+*/
+#footer {
+	overflow: auto;
+}
+
+#footer .wrapper{
+	overflow: auto;
+}
+
+#footer .wrapper > div:not(.social-media){
+	float: left;
+}
+/*~~~~~~~~~*/
+#footer .social-media {
+	float: right;
+
+}
+
+#footer ul{
+	marin:0;
+	padding-left: 0;
+}
+
+#footer li{
+	list-style-type: none;
+}
+
+
+#footer .contact-info {
+	width: 32%
+}
+
+
+#footer .navigation{
+	width: 16%;
+}
+
+#footer {
+	
+	padding:40px 0;
+}
+
+#footer .wrapper {
+	
+	border-top: 1px solid #ddd;
+	padding-top: 30px;
+}
+
+#footer a{
+	color: #159588;
+}
+
+#footer .title{
+	margin-top: 0;
+	margin-bottom: .6em;
+	font-size: 1em; /*em就是瀏覽器預設大小 原本沒有設h3的大小  通常會在瀏覽器上用檢查元素那邊打，打完所見即所得調完再貼在這邊
+	*/
+	text-transform: capitalize;
+}
+
+#footer .contact-info >div, #footer li{
+	line-height: 1.4em;
+	color: #888;
+	text-transform: capitalize;
+}
+
+.loading-bar {
+	height: 6px;
+	background-color: #159588;
+}
+/*
+但loading bar跟最上面還有一點間隔
+所以要套normalize css
+清掉很多預設值，
+*/
+
+#header {
+	padding: 40px 0;
+}
+
+#header .branding .tagline {
+	top: .7em;
+}
+
+.tagline .subtitle{
+	margin-bottom: 6px;
+	font-size: 0.92em;
+
+}
+
+.tagline .title {
+	font-weight: bold;
+}
+
+#navigation ul{
+	font-weight: bold;
+}
+
+#footer .wrapper {
+	padding-top: 40px;
+}
+
+#footer .contact-info  >div, #footer li {
+	font-size: 0.95em;
+	line-height: 1.6em;
+	color:  #888;
+	text-decoration: capitalize;
+}
+
+#footer .contact-info  >a {
+	font-size: 0.95em;
+	line-height: 1.6em;
+	color:  #159588;
+	text-decoration: none;
+}
+
+#footer .social-media ul{
+	overflow: auto;
+}
+
+#footer .social-media li{
+	float: left;
+	background-color: #eee;
+	padding: 2px;
+	margin-left: 4px;
+}
+
+#footer .social-media li a {
+	font-size: 1.8em;
+	line-height: 1.4em;
+	color: #333;
+}
+
+#navigation a:hover{
+	color: #159588;
+}
+
+#navigation a{
+
+	transition:linear .2s all ;  /*all 套用全部屬性*/
+}
+
+.work a:hover{ /*:hover 就是滑鼠移過去要做什麼調整*/
+	opacity: 1;
+}  
+  
+.work a {  /*transition tab 就會幫你補多個瀏覽器*/
+	-webkit-transition: linear .2s all;
+	-o-transition: linear .2s all;
+	transition: linear .2s all;
+
+}
+
+/*先設定html body有高 下面loading mask才撐得起來*/
+html, body {
+	height: 100%;
+}
+
+#loading-mask{
+	height: 100%;
+	width: 100%;
+	background: white;
+	position: fixed;
+	z-index: 50; /*設比較高 可以蓋掉別人 原本是0*/
+	text-align: center;/*內容左右置中  圖片至終是下面的top 50%
+	版面至終是  margin 0 auto */
+}
+
+#loading-mask img{
+	display: inline-block;
+	position:relative;
+	width: 320px;
+	height:auto;
+	top: 50%;
+	margin-top: -85%;
+}
+
+/*家玩loading bar css fix 但有些瀏覽器沒事*/
+#header .wrapper{
+	overflow: auto;
+}
+
+
+
+
+
+
+
+
+
